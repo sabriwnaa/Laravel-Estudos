@@ -3,7 +3,10 @@
 use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
-    return view('welcome');
+   
+    $nome = 'Sabrina';
+    $idade = 17;
+    return view('welcome', ['nome' => $nome, 'idade' => $idade]);
 });
 
 Route::get('/hello', function () {
